@@ -407,7 +407,7 @@ defmodule Wabbit.GenStage do
     end
   end
 
-  defp noreply_callback(callback, args, %{module: module} = state) do
+  defp noreply_callback(callback, args, %{mod: module} = state) do
     handle_noreply_callback apply(module, callback, args), state
   end
 
